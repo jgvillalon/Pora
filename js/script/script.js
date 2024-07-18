@@ -3,9 +3,8 @@ $(document).ready(function(){
     $(document).on('change', '#countItems', function(event) {
         $('#containerTable').empty();  
 
-        $.get("js/mock/fulldata.js", function(data) {
-            var datax = JSON.parse(data);
-            if (datax.TotalRecords > 0) {
+        $.get("https://c6cc6a3c-a11d-4a0a-ae58-755430ba925f.mock.pstmn.io/Persona", function(data) {
+            if (data.TotalRecords > 0) {
                 $('#containerTable').append(('<nav class="navbar navbar-expand-lg bg-white navtable" aria-label="Twelfth navbar example"><div class="container-fluid"><div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">' +
                         '<ul class="navbar-nav my-2 mb-0">' +
                         '<li class="nav-item d-flex nav-link litable-100"><p class="roboto-black-table"> Billing Provader Name &nbsp; </p><img src="assets/arrows.svg"  alt="mdo" width="15" height="15"></li>' +
@@ -24,7 +23,7 @@ $(document).ready(function(){
                         '</ul></div></div></nav> ')
                 );
 
-                $.each(datax.Items, function(index, value){
+                $.each(data.Items, function(index, value){
                     if(index < $('#countItems').val()){
                         $('#containerTable').append(('<nav class="navbar navbar-expand-lg bg-white border-top" aria-label="Twelfth navbar example1" id="index"' + index + '>' +
                             '<div class="container-fluid">' +
@@ -34,15 +33,15 @@ $(document).ready(function(){
                             '<p class="roboto-black-table-500"> ' +value.CI + ' </p></li>' +
                             '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.NombreApellidos + ' </p></li>' +
                             '<li class="nav-item  d-flex nav-link litable-80"><p class="roboto-black-table-500 ptable-60""> ' + value.TipoOficialAux + ' </p></li>' +
-                            '<li class="nav-item  d-flex nav-link litable-80"><p class="roboto-black-table-500 ptable-60""> ' + value.FechaNacimiento + ' </p></li>' +
+                            '<li class="nav-item  d-flex nav-link litable-80"><p class="roboto-black-table-500 ptable-60""> ' +  new Date(value.FechaNacimiento).toLocaleDateString('en-US') + ' </p></li>' +
                             '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.SexoAux + ' </p></li>' +
                             '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Nacionalidad + ' </p></li>' +
-                            '<li class="nav-item  d-flex nav-link litable-80"><p class="roboto-black-table-500 ptable-60""> ' + value.Titulo + ' </p></li>' +
-                            '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Folio + ' </p></li>' +
-                            '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Tomo + ' </p></li>' +
-                            '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Numero + ' </p></li>' +
-                            '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.FechaRefrendado + ' </p></li>' +
-                            '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Fechaexpedicion + ' </p></li>' +
+                            '<li class="nav-item  d-flex nav-link litable-80"><p class="roboto-black-table-500 ptable-60""> ' + value.Especialidad + ' </p></li>' +
+                            '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.NoExpediente + ' </p></li>' +
+                            '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.NacionalidadId + ' </p></li>' +
+                            '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.EspecialidadId + ' </p></li>' +
+                            '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Simabu + ' </p></li>' +
+                            '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + new Date(value.FechaGraduacion).toLocaleDateString('en-US') + ' </p></li>' +
                             '<li class="nav-item  d-flex nav-link litable-100"><button type="button" class="my-button hover active roboto-black-table-500" style="color: #ffffff; text-decoration: none;"> <span class="mail-single"></span> <strong>Read</strong> </button></li>' +
                             '</ul></div></div></nav>'));
                     }
@@ -67,9 +66,9 @@ $(document).ready(function(){
     //  });
 
     // llenado inicial
-    $.get("js/mock/fulldata.js", function(data) {
-        var datax = JSON.parse(data);
-        $.each(datax.Items, function(index, value){
+    $.get("https://c6cc6a3c-a11d-4a0a-ae58-755430ba925f.mock.pstmn.io/Persona", function(data) {
+        
+        $.each(data.Items, function(index, value){
             if(index < $('#countItems').val()){
                 $('#containerTable').append(('<nav class="navbar navbar-expand-lg bg-white border-top" aria-label="Twelfth navbar example1" id="index"' + index + '>' +
                     '<div class="container-fluid">' +
@@ -79,18 +78,18 @@ $(document).ready(function(){
                     '<p class="roboto-black-table-500"> ' +value.CI + ' </p></li>' +
                     '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.NombreApellidos + ' </p></li>' +
                     '<li class="nav-item  d-flex nav-link litable-80"><p class="roboto-black-table-500 ptable-60""> ' + value.TipoOficialAux + ' </p></li>' +
-                    '<li class="nav-item  d-flex nav-link litable-80"><p class="roboto-black-table-500 ptable-60""> ' + value.FechaNacimiento + ' </p></li>' +
+                    '<li class="nav-item  d-flex nav-link litable-80"><p class="roboto-black-table-500 ptable-60""> ' +  new Date(value.FechaNacimiento).toLocaleDateString('en-US') + ' </p></li>' +
                     '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.SexoAux + ' </p></li>' +
                     '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Nacionalidad + ' </p></li>' +
-                    '<li class="nav-item  d-flex nav-link litable-80"><p class="roboto-black-table-500 ptable-60""> ' + value.Titulo + ' </p></li>' +
-                    '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Folio + ' </p></li>' +
-                    '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Tomo + ' </p></li>' +
-                    '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Numero + ' </p></li>' +
+                    '<li class="nav-item  d-flex nav-link litable-80"><p class="roboto-black-table-500 ptable-60""> ' + value.Especialidad + ' </p></li>' +
+                    '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.NoExpediente + ' </p></li>' +
                     '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.NacionalidadId + ' </p></li>' +
-                    '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Fechaexpedicion + ' </p></li>' +
+                    '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.EspecialidadId + ' </p></li>' +
+                    '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + value.Simabu + ' </p></li>' +
+                    '<li class="nav-item  d-flex nav-link litable-100"><p class="roboto-black-table-500 ptable-80""> ' + new Date(value.FechaGraduacion).toLocaleDateString('en-US') + ' </p></li>' +
                     '<li class="nav-item  d-flex nav-link litable-100"><button type="button" class="my-button hover active roboto-black-table-500" style="color: #ffffff; text-decoration: none;"> <span class="mail-single"></span> <strong>Read</strong> </button></li>' +
                     '</ul></div></div></nav>'));
             }
       });
-    });         
+    });       
   });
