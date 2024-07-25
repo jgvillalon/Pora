@@ -109,9 +109,9 @@
     <br>
 
     <div class="container-fluid" >
-        <div class="row contenido-all" id="table1" style="color: black; padding: 0; border: 0; margin: 0;">
+        <div class="row contenido-all"  style="color: black; padding: 0; border: 0; margin: 0;">
             <!-- nav Left -->
-            <div class="flex-shrink-0 p-3 bg-white col-sm-2 col-md-2 col-lg-2 col-xl-2 navbigleft" >
+            <div id="navleft" class="flex-shrink-0 p-3 bg-white col-sm-2 col-md-2 col-lg-2 col-xl-2 navbigleft" >
               <div class="row align-items-end" id="imgdark">
                 <a href="#" class=" hover d-block mt-2" title="Favorites" aria-expanded="false" id="tagleft">
                   <img src="/assets/tag-dark.svg" id="tagdark" class="mb-2 imgTag" alt="mdo" width="28" height="28" style=" margin-left: 87% !important;">
@@ -127,10 +127,10 @@
                     </button>
                     <div class="collapse" id="home-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a id="f-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
+                        <li><a id="f-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
+                        <li><a id="f-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
+                        <li><a id="f-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
                       </ul>
                     </div>
                   </li>
@@ -142,10 +142,10 @@
                     </button>
                     <div class="collapse" id="claims-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a href="#" id="c-1" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
+                        <li><a href="#" id="c-2" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
+                        <li><a href="#" id="c-3" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
+                        <li><a href="#" id="c-4" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
                       </ul>
                     </div>
                   </li>
@@ -157,10 +157,10 @@
                     </button>
                     <div class="collapse" id="dashboard-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a id="d-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
+                        <li><a id="d-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
+                        <li><a id="d-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
+                        <li><a id="d-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
                       </ul>
                     </div>
                   </li>
@@ -172,10 +172,20 @@
                     </button>
                     <div class="collapse" id="email-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a id="em-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#lc-collapse" aria-expanded="true">Letter Center</a></li>
+                        <li><a id="em-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#lp-collapse" aria-expanded="true">Letter Presents</a></li>
+                          <div class="collapse" id="lp-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
+                              <li><a id="em-21" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Generate</a></li>
+                              <li><a id="em-22" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Print Center</a></li>
+                            </ul>
+                          </div>
+                        <li><a id="em-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#ilm-collapse" aria-expanded="true">Invalid Letter Mapping</a></li>
+                          <div class="collapse" id="ilm-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
+                              <li><a id="em-31" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lorem ipsum dolor sit</a></li>
+                            </ul>
+                          </div>
                       </ul>
                     </div>
                   </li>
@@ -187,10 +197,10 @@
                     </button>
                     <div class="collapse" id="members-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a id="m-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
+                        <li><a id="m-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
+                        <li><a id="m-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
+                        <li><a id="m-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
                       </ul>
                     </div>
                   </li>
@@ -202,10 +212,10 @@
                     </button>
                     <div class="collapse" id="payment-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a id="p-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
+                        <li><a id="p-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
+                        <li><a id="p-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
+                        <li><a id="p-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
                       </ul>
                     </div>
                   </li>
@@ -217,10 +227,39 @@
                     </button>
                     <div class="collapse" id="op-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a id="op-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded" data-bs-toggle="collapse" data-bs-target="#af-collapse" aria-expanded="true">Auditor Files</a></li>
+                          <div class="collapse navbar-collapse" id="af-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
+                              <li><a id="op-11" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Files History</a></li>
+                              <li><a id="op-12" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Upload Claim File</a></li>
+                            </ul>
+                          </div>
+                        <li><a id="op-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#n-collapse" aria-expanded="true">Notifications</a></li>
+                          <div class="collapse navbar-collapse" id="n-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
+                              <li><a id="op-21" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Alerts</a></li>
+                              <li><a id="op-22" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Phone Logs</a></li>
+                            </ul>
+                          </div>
+                        <li><a id="op-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#am-collapse" aria-expanded="true">Algorithm Management</a></li>
+                          <div class="collapse navbar-collapse" id="am-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
+                              <li><a id="op-31" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Configurations</a></li>
+                              <li><a id="op-32" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Listing</a></li>
+                              <li><a id="op-33" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Adjustment Reason List</a></li>
+                              <li><a id="op-34" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection Reason List</a></li>
+                              <li><a id="op-35" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Statutory Limit Settings</a></li>
+                            </ul>
+                          </div>
+                        <li><a id="op-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#ta-collapse" aria-expanded="true">Task Assignment</a></li>
+                        <div class="collapse navbar-collapse" id="ta-collapse">
+                          <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
+                            <li><a id="op-41" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Task</a></li>
+                            <li><a id="op-42" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Re-Assign Task</a></li>
+                            <li><a id="op-43" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">My Team Tasks</a></li>
+                            <li><a id="op-44" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">My Tasks</a></li>
+                          </ul>
+                        </div>
                       </ul>
                     </div>
                   </li>
@@ -330,148 +369,15 @@
               </div>
             </div>
 
-            <div class="col-md-10 col-lg-10 col-xl-10" style="margin-right: 0px;" >
-                <!-- nav up body -->
-                <div class="container my-1 col-sm-12 col-md-12 col-lg-12">
-                    <nav aria-label="breadcrumb">
-                      <ol class="breadcrumb p-3 body rounded-3">
-                        <li class="breadcrumb-item roboto-black-600 active"><a>Home</a></li>
-                        <li class="breadcrumb-item roboto-black-600"><a>Claims</a></li>
-                        <li class="breadcrumb-item roboto-black-600" aria-current="page"><a></a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle roboto-black-600 active" href="#" data-bs-toggle="dropdown" aria-expanded="false">Collection List</a>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Validation List</a></li>
-                              <li><a class="dropdown-item" href="#">Rejection List</a></li>
-                              <li><a class="dropdown-item" href="#">Collection List</a></li>
-                              <li><a class="dropdown-item" href="#">New Case</a></li>
-                            </ul>
-                          </li>
-                      </ol>
-                    </nav>
-                </div>
-                <!-- nav claims -->
-                <nav class="navbar navbar-expand-lg navbar-white" aria-label="Ninth navbar">
-                  <div class="container  col-xm-12 col-sm-12 col-md-12 col-lg-12">
-                    <h1>Claims</h1>            
-                    <div class="collapse navbar-collapse justify-content-lg-end">
-                      <a class="nav-link me-auto mt-2 me-lg-1 ms-lg-2 roboto-black-table-500" >Order by</a>
-                      <form role="search me-auto ms-lg-9 me-lg-4 ">
-                        <select class="form-select me-auto ms-lg-1 me-lg-3" style="width: 120px;"  id="order" required>
-                          <option value="#">All Status</option>
-                          <option value="#">Open</option>
-                          <option value="#">Closed</option>
-                          <option value="#">Closed Invalid</option>
-                          <option value="#">Closed By Settlement</option>
-                          <option value="#">Closed Partial Payment</option>
-                          <option value="#">Contested</option>
-                          <option value="#">Closed No Recovered</option>
-                          <option value="#">Overturned</option>
-                          <option value="#">Closed Due To State Statute</option>
-                        </select>
-                        <div class="invalid-feedback">
-                          Please select a valid Date.
-                        </div>
-                      </form>
-                      <a class="nav-link active me-auto mt-0 me-lg-1 roboto-black-900" aria-current="page" href="#">Tools</a>
-                      <img src="/assets/tools.svg" class="me-auto ms-lg-1 me-lg-1 active" href="" alt="mdo" width="20" height="20">
-                    </div>
-                  </div>
-                </nav>
-                <!-- nav collection -->
-                <nav class="navbar navbar-expand-lg navbar-white" aria-label="Ninth navbar">
-                  <div class="container  col-xm-12 col-sm-12 col-md-12 col-lg-12">
-                    <h3>Cases in Collection</h3>              
-                    <div class="collapse navbar-collapse justify-content-lg-end">
-                      <form class="col-12 col-lg-auto me-lg-3 mb-2 mb-md-0 formsearch" role="search" id="searchtable">
-                        <input type="search" class="form-control search" placeholder="¿Qué estás buscando?" aria-label="Search">
-                        <img src="/assets/search.svg" alt="mdo" width="24" height="24" class=" position-absolute search-icon-table hover active">
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" class="position-absolute top-0.2 translate-middle-y search-icon" width="25" height="25" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
-                         </svg> -->
-                      </form>
-                      <form role="search">
-                        <select class="form-select" style="width: 68px;"  id="countItems" required>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                          <option value="7">7</option>
-                          <option value="8">18</option>
-                        </select>
-                        <div class="invalid-feedback">
-                          Please select a valid country.
-                        </div>
-                      </form>
-                      <a class="nav-link me-auto mt-2 me-lg-1 ms-lg-2 roboto-black-table-500" >Items per page</a>
-                    </div>
-                  </div>
-                </nav>
+            <div id="DataContainer" class="col-md-10 col-lg-10 col-xl-10" style="margin-right: 0px;" >
+
                 <!-- table -->
                 <div class=" my-1 col-sm-12 col-md-12 col-lg-12" id="containerTable">
-                  <nav class="navbar navbar-expand-lg bg-white navtable col-sm-12 col-md-12 col-lg-12" style="box-shadow: 0 5px 0 0 rgba(0,0,0,.2);">
-                      <div class="col-sm-12 col-md-12 col-lg-12">                      
-                        <div>
-                          <ul class="d-flex my-2 mb-0 ps-3">
-                            <li class="nav-item d-flex nav-link litable-100">
-                              <p class="roboto-black-table"> Billing Provader Name </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table ms-2"> Vendor Name &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link">
-                              <p class="roboto-black-table ms-2"> Case No. &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table ms-2"> Claim No. &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table  ms-2"> Date of Services &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table  ms-2"> Ovp Amount &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table  ms-2"> Balance &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table ms-2"> Member Name &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table ms-3"> Algo Name &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table ms-2"> Program Name &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table ms-2"> Retraction ID &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table ms-2"> Notification &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>
-                            <li class="nav-item  d-flex nav-link litable-100">
-                              <p class="roboto-black-table ms-2"> Letters &nbsp; </p>
-                              <img src="assets/arrows-short.svg" class="mt-3"  alt="mdo" width="15" height="15">
-                            </li>                                  
-                          </ul>
-                        </div>
-                      </div>
-                  </nav>                    
-              </div>
+                                         
+                </div>
 
                 <!-- paginado --> 
-                <div class="container my-3 col-10 col-md-10 col-lg-12" id="containerpagination">
+                <!-- <div class="container my-3 col-10 col-md-10 col-lg-12" id="containerpagination">
                   <nav>
                     <ul class="pagination justify-content-end" id="pg1">
                       <li class="page-item">
@@ -487,7 +393,7 @@
                       </li>
                     </ul>
                   </nav>
-                </div>
+                </div> -->
             </div>
       </div>
         
