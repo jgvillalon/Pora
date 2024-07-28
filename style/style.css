@@ -113,7 +113,7 @@
 
 .navbigleft {
   width: 15rem;
-  height: 35rem;
+  height: auto;
   box-shadow: 0 0 5px 0 rgba(0,0,0,.2);
   border-radius: 0 15px 15px 0;
 } 
@@ -154,6 +154,38 @@ h2{
     text-align: start;
 }
 
+.litable-400{
+  width: 400px;
+  text-align: start;
+  text-align: center;
+  /* height: 0; */
+  padding: 0px;
+}
+
+.litable-300{
+  width: 300px;
+  /* height: 0; */
+  /* text-align: start; */
+  text-align: center;
+  padding: 0px;
+}
+
+.litable-200{
+  width: 200px;
+  /* height: 0; */
+  /* text-align: start; */
+  text-align: center;
+  padding: 0px;
+}
+
+.litable-150{
+  width: 150px;
+  /* height: 0; */
+  /* text-align: start; */
+  text-align: center;
+  padding: 0px;
+}
+
 .litable-100{
   width: 100px;
   text-align: start;
@@ -167,6 +199,22 @@ h2{
   margin-right: 0px;
 }
 
+.litable-60{
+  width: 60px;
+  text-align: start;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.litable-40{
+  width: 40px;
+  /* text-align: start; */
+  margin-left: 0px;
+  text-align: center;
+  /* height: 0; */
+  margin-right: 0px;
+}
+
 .ptable-80{
   width: 80px;
   text-align: start;
@@ -177,19 +225,49 @@ h2{
   text-align: start;
 }
 
+.ptable-250{
+  width: 250px;
+  text-align: start;
+  padding: 10px;
+}
+
+.ptable-180{
+  width: 180px;
+  text-align: start;
+  padding: 10px;
+}
+
+
 .btn {
   /* background-color: #615EFC; */
   /* color: #FFFFFF; */
 }
 
 .btn:hover{
-    color: #615EFC;
+  background-color: #cecdfe;
     /* color: #FFFFFF; */
     /* cursor:pointer */
 }
 
 .btn:active{
-  color: #615EFC;
+  background-color: #615EFC;
+  padding: 5px;
+}
+
+.btnsub {
+  /* background-color: #615EFC; */
+  /* color: #FFFFFF; */
+}
+
+.btnsub:hover{
+  background-color: #cecdfe;
+  padding: 5px;
+    /* color: #FFFFFF; */
+    /* cursor:pointer */
+}
+
+.btnsub:active{
+  background-color: #615EFC;
 }
 
 /* Nav left */
@@ -208,12 +286,35 @@ h2{
 
 
 /* Boton read mail */
+.my-button-email {
+    padding: 1px 15px;
+    background-color: #615EFC;
+    background-image: url('/assets/email-single.svg');
+    background-repeat: no-repeat;
+    background-position: 10%;
+    text-align: right;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 80px;
+    /* top: 00px; */
+    cursor: pointer;
+  }
+  .my-button-email:hover {
+    background-color: #9593fd;
+  }
+  .my-button-email:active {
+    background-color: #9593fd;
+  }
+
+/* Boton read mail */
 .my-button {
     padding: 1px 15px;
     background-color: #615EFC;
     background-image: url('/assets/email.svg');
     background-repeat: no-repeat;
-    background-position: 20%;
+    background-position: 10%;
     text-align: right;
     color: white;
     border: none;
@@ -228,6 +329,226 @@ h2{
   }
   .my-button:active {
     background-color: #9593fd;
+  }
+
+  /* Boton UoDown mail */
+  .my-button-UoDown {
+    padding: 1px 15px;
+    background-color: #615EFC;
+    background-image: url('/assets/arrowsdown-dark.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    /* top: 00px; */
+    cursor: pointer;
+  }
+  .my-button-UoDown:hover {
+    background-color: #9593fd;
+  }
+  .my-button-UoDown:active {
+    background-color: #9593fd;
+  }
+
+  /* Boton Copy mail */
+  .my-button-copy {
+    padding: 1px 15px;
+    background-color: #615EFC;
+    background-image: url('/assets/copia-dark.svg');
+    background-repeat: no-repeat;
+    background-position: 20%;
+    text-align: right;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 80px;
+    /* top: 00px; */
+    cursor: pointer;
+  }
+  .my-button-copy:hover {
+    background-color: #9593fd;
+  }
+  .my-button-copy:active {
+    background-color: #9593fd;
+  }
+
+  /* Boton On mail */
+  .my-button-on {
+    padding: 1px 15px;
+    background-color: #615EFC;
+    background-image: url('/assets/on-dark.svg');
+    background-repeat: no-repeat;
+    background-position: 20%;
+    text-align: right;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 80px;
+    /* top: 00px; */
+    cursor: pointer;
+  }
+  .my-button-on:hover {
+    background-color: #9593fd;
+  }
+  .my-button-on:active {
+    background-color: #9593fd;
+  }
+
+  /* Boton Edit */
+  .my-button-edit {
+    padding: 1px 15px;
+    background-color: #615EFC;
+    background-image: url('/assets/edit-dark.svg');
+    background-repeat: no-repeat;
+    background-position: 20%;
+    text-align: right;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 80px;
+    /* top: 00px; */
+    cursor: pointer;
+  }
+  .my-button-edit:hover {
+    background-color: #9593fd;
+  }
+  .my-button-edit:active {
+    background-color: #9593fd;
+  }
+
+  /* Boton play */
+  .my-button-play {
+    padding: 1px 15px;
+    background-color: #615EFC;
+    background-image: url('/assets/play-dark.svg');
+    background-repeat: no-repeat;
+    background-position: 20%;
+    text-align: right;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 80px;
+    /* top: 00px; */
+    cursor: pointer;
+  }
+  .my-button-play:hover {
+    background-color: #9593fd;
+  }
+  .my-button-play:active {
+    background-color: #9593fd;
+  }
+
+  /* Boton download */
+  .my-button-download {
+    padding: 1px 15px;
+    background-color: #615EFC;
+    background-image: url('/assets/download-single.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    text-align: right;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    /* top: 00px; */
+    cursor: pointer;
+  }
+  .my-button-download:hover {
+    background-color: #9593fd;
+  }
+  .my-button-download:active {
+    background-color: #9593fd;
+  }
+
+  /* Boton close */
+  .my-button-close {
+    padding: 1px 15px;
+    background-color: #615EFC;
+    background-image: url('/assets/x-single.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    text-align: right;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    /* top: 00px; */
+    cursor: pointer;
+  }
+  .my-button-close:hover {
+    background-color: #9593fd;
+  }
+  .my-button-close:active {
+    background-color: #9593fd;
+  }
+
+  /* Boton grid */
+  .my-button-grid {
+    padding: 1px 15px;
+    background-color: #615EFC;
+    background-image: url('/assets/grid-single.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    text-align: right;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: 30px;
+    /* top: 00px; */
+    cursor: pointer;
+  }
+  .my-button-grid:hover {
+    background-color: #9593fd;
+  }
+  .my-button-grid:active {
+    background-color: #9593fd;
+  }
+
+  /* Boton general */
+  .my-button-card {
+    padding: 1px 15px;
+    background-color: #29276a;
+    background-image: url('/assets/x-single.svg');
+    background-repeat: no-repeat;
+    background-position: 95%;
+    text-align: left;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: auto; 
+    cursor: pointer;
+  }
+
+  .my-button-card-blank {
+    padding: 1px 15px;
+    background-color:  #615EFC;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    text-align: left;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    width: auto; 
+    cursor: pointer;
+  }
+
+  hr {
+    border-color: #615EFC;
+    border-width: 80%;
+    border: 2;
   }
 
   /* table */
@@ -249,6 +570,38 @@ h2{
     height: 50px;
     margin-left: 100px;
   }
+
+  .caja-destacada{
+    padding:10px 10px 10px 10px;
+    background:#ffe4b5;
+    height: 1px !important;
+    width: 100px;
+    border-radius: 10px 10px 10px 10px;
+    text-align: left;
+    line-height:2px !important;
+    text-decoration-color: #ffe4b5;
+    }
+
+    .contenerdor1 {
+      background-color: green;
+      height: 20px;
+      width: 100px;
+      line-height: 20px !important;
+      text-align: center;
+      text-decoration-color: white;
+      border-radius: 15px 0 0 15px;
+    }
+  
+    .contenerdor2 {
+      background-color: #ffa811;
+      height: 20px;
+      width: 100px;
+      line-height: 15px !important;
+      text-align: center;
+      text-decoration-color: white;
+      border-radius: 0 15px 15px 0;
+    }
+  
 /* 
   .content-table th
   .content-table td {
@@ -314,8 +667,15 @@ h2{
   .roboto-black-600 {
     font-family: "Roboto", sans-serif;
     font-weight: 600;
-    font-size: small;
-    text-decoration: underline;
+    font-size: medium;
+    font-style: normal;
+  }
+
+  .roboto-black-600-underline {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: medium;
+    /* text-decoration: underline; */
     font-style: normal;
   }
 
@@ -342,6 +702,7 @@ h2{
     background-image: '';
   }
 
+ 
   .roboto-black-900 {
     font-family: "Roboto", sans-serif;
     font-weight: 900;
@@ -361,6 +722,65 @@ h2{
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: medium;
+    font-style: normal;
+  }
+
+  .roboto-black-table-100-small {
+    font-family: "Roboto", sans-serif;
+    font-weight: 0;
+    font-size: x-small;
+    font-style: normal;
+  }
+
+  .roboto-black-table-300-small {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: small;
+    font-style: normal;
+  }
+
+  .roboto-black-table-150-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: small;
+    font-style: normal;
+  }
+
+  .roboto-black-table-300-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;
+    font-size: medium;
+    font-style: normal;
+  }
+
+  .roboto-black-table-350-small {
+    font-family: "Roboto", sans-serif;
+    font-weight: 350;
+    font-size: small;
+    font-style: normal;
+  }
+
+  .roboto-black-table-100-small-color {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    color: #ffffff;
+    font-size: small;
+    font-style: normal;
+  }
+
+  .roboto-black-table-500-small-color {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    color: #ffa811;
+    font-size: x-small;
+    font-style: normal;
+  }
+
+  .roboto-black-table-500-small-color-green {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    color: #81b522;
+    font-size: x-small;
     font-style: normal;
   }
 
@@ -422,6 +842,26 @@ h2{
 
   .pagination a active{
     text-decoration: #615EFC;
+  }
+
+  /*Card*/
+
+  .card {
+      background-color: #efefff;
+      border: 0;
+      margin-right: 5px;
+      width: 14rem;
+  }
+
+  .card-body {
+    /* background-color: #efefff; */
+  } 
+
+  .card-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: medium;
+    font-style: normal;
   }
 
   /* Iconos */
@@ -741,3 +1181,47 @@ h2{
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
   }
+
+  .dropdown-menu li {
+    position: relative;
+    }
+    .dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+    }
+    .dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+    }
+    .dropdown-menu > li:hover > .dropdown-submenu {
+    display: block;
+    }
+
+
+
+
+  
+  li.submenu.dropinline>a.dropdown-toggle.show::after {
+      transform: rotate(0deg);
+  }
+  
+  li.submenu.dropinline>a.dropdown-toggle::after {
+      transform: rotate(-90deg);
+  }
+
+  li.submenu-md.dropinline ul.dropdown-menu[data-bs-popper] {
+    position: relative;
+    width: 100% !important;
+    border: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+li.submenu-md.dropinline ul.dropdown-menu[data-bs-popper] li {
+    padding-left: 1em;
+}
+  
+  
+  

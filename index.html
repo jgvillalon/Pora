@@ -48,12 +48,18 @@
     <!-- <script src="/js/jquery.min.js"></script> -->
      
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="/js/script/script.js"></script>
+    <script type="module" src="/js/script/script.js"></script>
     <style> 
         #header{
           position: fixed;
           width: 100%;
           z-index: 1000;
+        }
+        .dropdown-menu {
+          --bs-dropdown-link-hover-bg: #cecdfe;
+          --bs-dropdown-link-active-bg: #615efc;
+          --bs-dropdown-link-radius: 2rem !important;
+          border-radius: 15;
         }
         /* .col-lg-8 {
           width: 80%;
@@ -127,10 +133,10 @@
                     </button>
                     <div class="collapse" id="home-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a id="f-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a id="f-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a id="f-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a id="f-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a id="f-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Validation List</a></li>
+                        <li><a id="f-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Rejection List</a></li>
+                        <li><a id="f-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Collection List</a></li>
+                        <li><a id="f-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">New Case</a></li>
                       </ul>
                     </div>
                   </li>
@@ -142,10 +148,10 @@
                     </button>
                     <div class="collapse" id="claims-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a href="#" id="c-1" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a href="#" id="c-2" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a href="#" id="c-3" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a href="#" id="c-4" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a href="#" id="c-1" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Validation List</a></li>
+                        <li><a href="#" id="c-2" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Rejection List</a></li>
+                        <li><a href="#" id="c-3" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Collection List</a></li>
+                        <li><a href="#" id="c-4" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">New Case</a></li>
                       </ul>
                     </div>
                   </li>
@@ -157,10 +163,10 @@
                     </button>
                     <div class="collapse" id="dashboard-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a id="d-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a id="d-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a id="d-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a id="d-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a id="d-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Validation List</a></li>
+                        <li><a id="d-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Rejection List</a></li>
+                        <li><a id="d-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Collection List</a></li>
+                        <li><a id="d-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">New Case</a></li>
                       </ul>
                     </div>
                   </li>
@@ -171,19 +177,20 @@
                       <p class="roboto-light" style="margin-bottom: 0px;"><strong>Mail Room</strong></p>
                     </button>
                     <div class="collapse" id="email-collapse">
-                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a id="em-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#lc-collapse" aria-expanded="true">Letter Center</a></li>
-                        <li><a id="em-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#lp-collapse" aria-expanded="true">Letter Presents</a></li>
-                          <div class="collapse" id="lp-collapse">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-0">
+                        <li><a /*id="em-1"*/ href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btn btn-toggle collapsed dropdown-toggle-nav-left"  data-bs-toggle="collapse" data-bs-target="#lc-collapse" aria-expanded="false">Letter Center</a></li>
+                        <!-- <li><a id="em-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#lp-collapse" aria-expanded="true">Letter Presents</a></li> -->
+                          <div class="collapse" id="lc-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                              <li><a id="em-21" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Generate</a></li>
-                              <li><a id="em-22" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Print Center</a></li>
+                              <li><a id="em-11" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Generate</a></li>
+                              <li><a id="em-12" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Print Center</a></li>
+                              <li><a id="em-13" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Letter Presets</a></li>
                             </ul>
                           </div>
-                        <li><a id="em-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#ilm-collapse" aria-expanded="true">Invalid Letter Mapping</a></li>
+                        <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded dropdown-toggle-nav-left btn btn-toggle"  data-bs-toggle="collapse" data-bs-target="#ilm-collapse" aria-expanded="true">Invalid Letter Mapping</a></li>
                           <div class="collapse" id="ilm-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                              <li><a id="em-31" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Lorem ipsum dolor sit</a></li>
+                              <li><a id="em-21" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Lorem ipsum dolor sit</a></li>
                             </ul>
                           </div>
                       </ul>
@@ -192,15 +199,15 @@
                   <!-- Members -->
                   <li class="mb-1 li-table">
                     <img src="assets/member.svg" alt="">
-                    <button class="btn btn-toggle d-inline-flex align-items-left ps-1 pe-1 my-2 rounded border-0 collapsed dropdown-toggle-nav-left" data-bs-toggle="collapse" id="members" data-bs-target="#members-collapse" aria-expanded="false">
+                    <button class="btn btn-toggle d-inline-flex align-items-left ps-1 pe-1 my-2 rounded border-0 collapsed dropdown-toggle-nav-left " data-bs-toggle="collapse" id="members" data-bs-target="#members-collapse" aria-expanded="false">
                       <p class="roboto-light" style="margin-bottom: 0px;"><strong>Members</strong></p>
                     </button>
                     <div class="collapse" id="members-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a id="m-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a id="m-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a id="m-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a id="m-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a id="m-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Validation List</a></li>
+                        <li><a id="m-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Rejection List</a></li>
+                        <li><a id="m-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Collection List</a></li>
+                        <li><a id="m-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">New Case</a></li>
                       </ul>
                     </div>
                   </li>
@@ -212,10 +219,10 @@
                     </button>
                     <div class="collapse" id="payment-collapse">
                       <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a id="p-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Validation List</a></li>
-                        <li><a id="p-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection List</a></li>
-                        <li><a id="p-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Collection List</a></li>
-                        <li><a id="p-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Case</a></li>
+                        <li><a id="p-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Validation List</a></li>
+                        <li><a id="p-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Rejection List</a></li>
+                        <li><a id="p-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">Collection List</a></li>
+                        <li><a id="p-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub roboto-black-table-150-medium">New Case</a></li>
                       </ul>
                     </div>
                   </li>
@@ -226,38 +233,38 @@
                       <p class="roboto-light" style="margin-bottom: 0px;"><strong>Operational Activities</strong></p>
                     </button>
                     <div class="collapse" id="op-collapse">
-                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                        <li><a id="op-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded" data-bs-toggle="collapse" data-bs-target="#af-collapse" aria-expanded="true">Auditor Files</a></li>
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-0">
+                        <li><a id="op-1" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btn btn-toggle dropdown-toggle-nav-left roboto-black-table-150-medium" data-bs-toggle="collapse" data-bs-target="#af-collapse" aria-expanded="true">Auditor Files</a></li>
                           <div class="collapse navbar-collapse" id="af-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                              <li><a id="op-11" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Files History</a></li>
-                              <li><a id="op-12" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Upload Claim File</a></li>
+                              <li><a id="op-11" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">Files History</a></li>
+                              <li><a id="op-12" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">Upload Claim File</a></li>
                             </ul>
                           </div>
-                        <li><a id="op-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#n-collapse" aria-expanded="true">Notifications</a></li>
+                        <li><a id="op-2" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btn btn-toggle dropdown-toggle-nav-left roboto-black-table-150-medium"  data-bs-toggle="collapse" data-bs-target="#n-collapse" aria-expanded="true">Notifications</a></li>
                           <div class="collapse navbar-collapse" id="n-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                              <li><a id="op-21" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Alerts</a></li>
-                              <li><a id="op-22" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Phone Logs</a></li>
+                              <li><a id="op-21" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">Alerts</a></li>
+                              <li><a id="op-22" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">Phone Logs</a></li>
                             </ul>
                           </div>
-                        <li><a id="op-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#am-collapse" aria-expanded="true">Algorithm Management</a></li>
-                          <div class="collapse navbar-collapse" id="am-collapse">
+                        <li><a id="op-3" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded dropdown-toggle-nav-left btn btn-toggle  roboto-black-table-150-medium"  data-bs-toggle="collapse" data-bs-target="#am-collapse" aria-expanded="true">Algorithm Management</a></li>
+                          <div class="collapse" id="am-collapse">
                             <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                              <li><a id="op-31" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Configurations</a></li>
-                              <li><a id="op-32" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Listing</a></li>
-                              <li><a id="op-33" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Adjustment Reason List</a></li>
-                              <li><a id="op-34" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Rejection Reason List</a></li>
-                              <li><a id="op-35" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Statutory Limit Settings</a></li>
+                              <li><a id="op-31" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">Configurations</a></li>
+                              <li><a id="op-32" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">Listing</a></li>
+                              <li><a id="op-33" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">Adjustment Reason List</a></li>
+                              <li><a id="op-34" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">Rejection Reason List</a></li>
+                              <li><a id="op-35" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">Statutory Limit Settings</a></li>
                             </ul>
                           </div>
-                        <li><a id="op-4" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded"  data-bs-toggle="collapse" data-bs-target="#ta-collapse" aria-expanded="true">Task Assignment</a></li>
+                        <li><a id="op-4" href="#" class="d-inline-flex text-decoration-none rounded btn btn-toggle dropdown-toggle-nav-left roboto-black-table-150-medium"  data-bs-toggle="collapse" data-bs-target="#ta-collapse" aria-expanded="true">Task Assignment</a></li>
                         <div class="collapse navbar-collapse" id="ta-collapse">
                           <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ms-3">
-                            <li><a id="op-41" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New Task</a></li>
-                            <li><a id="op-42" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Re-Assign Task</a></li>
-                            <li><a id="op-43" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">My Team Tasks</a></li>
-                            <li><a id="op-44" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">My Tasks</a></li>
+                            <li><a id="op-41" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">New Task</a></li>
+                            <li><a id="op-42" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">Re-Assign Task</a></li>
+                            <li><a id="op-43" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">My Team Tasks</a></li>
+                            <li><a id="op-44" href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded btnsub">My Tasks</a></li>
                           </ul>
                         </div>
                       </ul>
@@ -274,97 +281,127 @@
               </div>
               <div class="row align-items-center" style="display: none;" id="cuerposmall">
                 <ul class="list-unstyled ps-2">
-                  <!-- Favorites -->
-                  <a href="/" class="a_icon_menu hover d-block align-items-center justify-content-center  link-body-emphasis text-decoration-none dropdown-toggle mt-4"  title="Favorites" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="/assets/favorites.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                    <img src="/assets/favorites-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                  </a>
-                  <p class="roboto-bold-200"><strong>Favorites</strong></p>
-                  <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
-                   <!-- Claims -->
-                   <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Claims" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="/assets/claims.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                    <img src="/assets/claims-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                  </a>
-                  <p class="roboto-bold-200"><strong>Claims</strong></p>
-                  <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
-                  <!-- Dashboard -->
-                  <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Dashboard" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="/assets/dashboard.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                    <img src="/assets/dashboard-dark.svg" class="mb-2 icon_menu  hover active" alt="mdo" width="24" height="24">
-                  </a>
-                  <p class="roboto-bold-200"><strong>Dashboard</strong></p>
-                  <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
-                  <!-- Mail Room -->
-                  <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Mail Room" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="/assets/email.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                    <img src="/assets/email-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                  </a>
-                  <p class="roboto-bold-200"><strong>Mail Room</strong></p>
-                  <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
-                  <!-- Members -->
-                  <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Members" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="/assets/member.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                    <img src="/assets/member-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                  </a>
-                  <p class="roboto-bold-200"><strong>Members</strong></p>
-                  <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
-                  <!-- Payment Center -->
-                  <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Payment Center" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="/assets/payment.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                    <img src="/assets/payment-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                  </a>
-                  <p class="roboto-bold-200"><strong>Payment Center</strong></p>
-                  <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
-                  <!-- Operational Activities -->
-                  <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Operational Activities" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="/assets/op.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                    <img src="/assets/op-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
-                  </a>
-                  <p class="roboto-bold-200"><strong>Operational Activities</strong></p>
-                  <ul class="dropdown-menu text-small shadow">
-                    <li><a class="dropdown-item" href="#">New project...</a></li>
-                    <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Sign out</a></li>
-                  </ul>
+                  <li class="nav-item dropdown">
+                    <!-- Favorites -->
+                    <a href="/" class="a_icon_menu hover d-block align-items-center justify-content-center  link-body-emphasis text-decoration-none dropdown-toggle mt-4"  title="Favorites" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/assets/favorites.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                      <img src="/assets/favorites-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                    </a>
+                    <p class="roboto-bold-200"><strong>Favorites</strong></p>
+                    <ul class="dropdown-menu text-small shadow">
+                      <li><a id="f-1" class="dropdown-item roboto-black-table-300-small" href="#">Validation List</a></li>
+                      <li><a id="f-2" class="dropdown-item" href="#">Rejection List</a></li>
+                      <li><a id="f-3" class="dropdown-item" href="#">Collection List</a></li>
+                      <li><a id="f-4" class="dropdown-item" href="#">New Case</a></li>
+                    </ul>
+                    <!-- Claims -->
+                    <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Claims" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/assets/claims.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                      <img src="/assets/claims-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                    </a>
+                    <p class="roboto-bold-200"><strong>Claims</strong></p>
+                    <ul class="dropdown-menu text-small shadow">
+                      <li><a id="c-1" class="dropdown-item" href="#">Validation List</a></li>
+                      <li><a id="c-2" class="dropdown-item" href="#">Rejection List</a></li>
+                      <li><a id="c-3" class="dropdown-item" href="#">Collection List</a></li>
+                      <li><a id="c-4" class="dropdown-item" href="#">New Case</a></li>
+                    </ul>
+                    <!-- Dashboard -->
+                    <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Dashboard" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/assets/dashboard.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                      <img src="/assets/dashboard-dark.svg" class="mb-2 icon_menu  hover active" alt="mdo" width="24" height="24">
+                    </a>
+                    <p class="roboto-bold-200"><strong>Dashboard</strong></p>
+                    <ul class="dropdown-menu text-small shadow">
+                      <li><a id="d-1" class="dropdown-item" href="#">Validation List</a></li>
+                      <li><a id="d-2" class="dropdown-item" href="#">Rejection List</a></li>
+                      <li><a id="d-3" class="dropdown-item" href="#">Collection List</a></li>
+                      <li><a id="d-4"class="dropdown-item" href="#">New Case</a></li>
+                    </ul>
+                    <!-- Mail Room -->
+                    <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis  dropdown-toggle" title="Mail Room" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/assets/email.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                      <img src="/assets/email-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                    </a>
+                    <p class="roboto-bold-200"><strong>Mail Room</strong></p>
+                    <ul class="dropdown-menu text-small shadow">
+                      <!-- <li><a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle ms-2" title="Letter Center" data-bs-toggle="dropdown" aria-expanded="true">Letter Center</a></li> -->
+                      <li><a class="dropdown-item dropdown-toggle" href="#" >Letter Center  </a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                          <li><a id="em-11" class="dropdown-item roboto-black-table-300-small" href="#">Generate</a></li>
+                          <li><a id="em-12" class="dropdown-item roboto-black-table-300-small" href="#">Print Center</a></li>
+                          <li><a id="em-13" class="dropdown-item roboto-black-table-300-small" href="#">Letter Preseets</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item dropdown-toggle" href="#">Invalid Letter Mapping</a>
+                        <ul class="dropdown-menu text-small shadow dropdown-submenu">
+                          <li><a id="em-21" class="dropdown-item roboto-black-table-300-small" href="#">Lorem ipsum dolor sit</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+
+                    <!-- Members -->
+                    <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Members" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/assets/member.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                      <img src="/assets/member-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                    </a>
+                    <p class="roboto-bold-200"><strong>Members</strong></p>
+                    <ul class="dropdown-menu text-small shadow">
+                      <li><a id="m-1" class="dropdown-item roboto-black-table-300-small" href="#">New project...</a></li>
+                      <li><a id="m-2" class="dropdown-item roboto-black-table-300-small" href="#">Settings</a></li>
+                      <li><a id="m-3" class="dropdown-item roboto-black-table-300-small" href="#">Profile</a></li>
+                      <li><a id="m-4" class="dropdown-item roboto-black-table-300-small" href="#">Sign out</a></li>
+                    </ul>
+                    <!-- Payment Center -->
+                    <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Payment Center" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/assets/payment.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                      <img src="/assets/payment-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                    </a>
+                    <p class="roboto-bold-200"><strong>Payment Center</strong></p>
+                    <ul class="dropdown-menu text-small shadow">
+                      <li><a id="p-1" class="dropdown-item roboto-black-table-300-small" href="#">New project...</a></li>
+                      <li><a id="p-2" class="dropdown-item roboto-black-table-300-small" href="#">Settings</a></li>
+                      <li><a id="p-3" class="dropdown-item roboto-black-table-300-small" href="#">Profile</a></li>
+                      <li><a id="p-4"class="dropdown-item roboto-black-table-300-small" href="#">Sign out</a></li>
+                    </ul>
+                    <!-- Operational Activities -->
+                    <a href="/" class=" a_icon_menu hover d-block align-items-center justify-content-center p1 link-body-emphasis text-decoration-none dropdown-toggle" title="Operational Activities" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="/assets/op.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                      <img src="/assets/op-dark.svg" class="mb-2 icon_menu active" alt="mdo" width="24" height="24">
+                    </a>
+                    <p class="roboto-bold-200"><strong>Operational Activities</strong></p>
+                    <ul class="dropdown-menu text-small shadow">
+                      <li><a id="op-1" class="dropdown-item dropdown-toggle " href="#">Auditor Files</a>
+                        <ul class="dropdown-menu text-small shadow dropdown-submenu">
+                          <li><a id="op-11" class="dropdown-item roboto-black-table-300-small" href="#">Files History</a></li>
+                          <li><a id="op-12" class="dropdown-item roboto-black-table-300-small" href="#">Upload Claim File</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item dropdown-toggle" href="#">Notifications</a>
+                        <ul class="dropdown-menu text-small shadow dropdown-submenu">
+                          <li><a id="op-21" class="dropdown-item roboto-black-table-300-small" href="#">Alerts</a></li>
+                          <li><a id="op-22" class="dropdown-item roboto-black-table-300-small" href="#">Phone Logs</a></li>
+                        </ul>
+                      </li>
+                      <li><a  class="dropdown-item dropdown-toggle" href="#">Algorithm Management</a>
+                        <ul class="dropdown-menu text-small shadow dropdown-submenu">
+                          <li><a id="op-31" class="dropdown-item roboto-black-table-300-small" href="#">Configurations</a></li>
+                          <li><a id="op-32" class="dropdown-item roboto-black-table-300-small" href="#">Listing</a></li>
+                          <li><a id="op-33" class="dropdown-item roboto-black-table-300-small" href="#">Adjustment Reason List</a></li>
+                          <li><a id="op-34"class="dropdown-item roboto-black-table-300-small" href="#">Rejection Reason List</a></li>
+                          <li><a id="op-35"class="dropdown-item roboto-black-table-300-small" href="#">Statutory Limit Settings</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item dropdown-toggle" href="#">Task Assignment</a>
+                        <ul class="dropdown-menu text-small shadow dropdown-submenu">
+                          <li><a id="op-41" class="dropdown-item roboto-black-table-300-small" href="#">New Task</a></li>
+                          <li><a id="op-42" class="dropdown-item roboto-black-table-300-small" href="#">Re-Assign Task</a></li>
+                          <li><a id="op-43" class="dropdown-item roboto-black-table-300-small" href="#">My Team Tasks</a></li>
+                          <li><a id="op-44"class="dropdown-item " href="#">My Tasks</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>                  
                 </ul>
               </div>
             </div>
@@ -372,9 +409,9 @@
             <div id="DataContainer" class="col-md-10 col-lg-10 col-xl-10" style="margin-right: 0px;" >
 
                 <!-- table -->
-                <div class=" my-1 col-sm-12 col-md-12 col-lg-12" id="containerTable">
+                <!-- <div class=" my-1 col-sm-12 col-md-12 col-lg-12" id="containerTable">
                                          
-                </div>
+                </div> -->
 
                 <!-- paginado --> 
                 <!-- <div class="container my-3 col-10 col-md-10 col-lg-12" id="containerpagination">
